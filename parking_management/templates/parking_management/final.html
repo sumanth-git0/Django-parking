@@ -1,0 +1,35 @@
+{% extends 'parking_management/home.html' %}
+
+{% block title %}Parking{% endblock %}
+
+{% block content %}
+<div style="margin: 10px;">
+  <form method="post">
+    {% csrf_token %}
+    <label for="number">Vehicle Number : </label>
+    <input type="text" id="vnum" name="number" /><br /><br />
+    <button type="submit">Confirm</button>
+  </form>
+</div>
+{% endblock %}
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking</title>
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      <label for="number">Vehicle Number : </label>
+      <input type="text" id="vnum" name="number" /><br /><br />
+      <button type="submit">Confirm</button>
+    </form>
+    <h2><a href="/">Home</a></h2>
+  </body>
+</html> -->

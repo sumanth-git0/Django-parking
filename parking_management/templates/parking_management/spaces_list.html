@@ -1,0 +1,37 @@
+{% extends 'parking_management/home.html' %}
+
+{% block title %}Spaces List{% endblock %}
+
+{% block content %}
+<div style="margin: 10px;">
+  <h1>Data List</h1>
+  <ul>
+    {% for item in spaces %}
+      <li>Level : {{ item.Level }}</li>
+      <li>TWA : {{ item.TWA }}</li>
+      <li>FWA : {{ item.FWA }}</li>
+      <hr />
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Data List</title>
+  </head>
+  <body>
+    <h1>Data List</h1>
+    <ul>
+      {% for item in spaces %}
+      <li>Level : {{ item.Level }}</li>
+      <li>TWA : {{ item.TWA }}</li>
+      <li>FWA : {{ item.FWA }}</li>
+      <hr />
+      {% endfor %}
+    </ul>
+  </body>
+</html> -->

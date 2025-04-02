@@ -1,0 +1,34 @@
+{% extends 'parking_management/home.html' %}
+
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+<div style="margin: 10px;">
+  {% if not request.user.is_authenticated %}
+  <h2>Login</h2>
+  <form method="post" action="/login/">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  <br>
+  New User <h5><a href="{% url 'signup' %}">Sign Up</a></h5>
+  {% endif %}
+</div>
+{% endblock %}
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <h2>Login</h2>
+    <form method="post" action="/login/">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Login</button>
+    </form>
+    <a href="{% url 'signup' %}">Sign Up</a>
+  </body>
+</html> -->
